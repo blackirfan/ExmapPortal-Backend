@@ -13,8 +13,7 @@ import org.springframework.context.annotation.Bean;
 import java.util.HashSet;
 import java.util.Set;
 
-@SpringBootApplication(scanBasePackages={
-		"com.exam.service"})
+@SpringBootApplication
 
 public class ExamserverApplication implements CommandLineRunner {
 
@@ -28,25 +27,25 @@ public class ExamserverApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("starting my code");
 
-		User user = new User();
-		user.setFirstName("Irfan");
-		user.setLastName("Hossain");
-		user.setUsername("irfan101");
-		user.setPassword("123456");
-		user.setEmail("irfan@gmail.com");
-		user.setProfile("default.png");
-
-		Role role1 = new Role();
-		role1.setRoleId(44L);
-		role1.setRoleName("ADMIN");
-		Set<UserRole> userRoleSet = new HashSet<>();
-		UserRole userRole = new UserRole();
-		userRole.setRole(role1);
-		userRole.setUser(user);
-		userRoleSet.add(userRole);
-
-		User user1 = this.userService.createUser(user, userRoleSet);
-		System.out.println(user1.getUsername());
+//		User user = new User();
+//		user.setFirstName("Irfan");
+//		user.setLastName("Hossain");
+//		user.setUsername("irfan101");
+//		user.setPassword("123456");
+//		user.setEmail("irfan@gmail.com");
+//		user.setProfile("default.png");
+//
+//		Role role1 = new Role();
+//		role1.setRoleId(44L);
+//		role1.setRoleName("ADMIN");
+//		Set<UserRole> userRoleSet = new HashSet<>();
+//		UserRole userRole = new UserRole();
+//		userRole.setRole(role1);
+//		userRole.setUser(user);
+//		userRoleSet.add(userRole);
+//
+//		User user1 = this.userService.createUser(user, userRoleSet);
+//		System.out.println(user1.getUsername());
 
 
 
